@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  html {
+    font-family: 'Roboto Slab', serif;
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-[#FEFEFE] text-[#1f2937] tracking-wide;
+    @apply bg-[#ECF0F3] text-[#374151] tracking-wider;
   }
 
   h1,
@@ -14,25 +21,5 @@
   h5,
   h6 {
     @apply font-bold;
-  }
-
-  h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl;
-  }
-
-  h2 {
-    @apply text-3xl sm:text-4xl;
-  }
-
-  li {
-    @apply cursor-pointer font-semibold;
-  }
-
-  p {
-    @apply font-semibold;
-  }
-
-  button {
-    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-[#ffffff];
   }
 }
