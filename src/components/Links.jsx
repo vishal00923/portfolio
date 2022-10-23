@@ -1,54 +1,37 @@
 import Link from 'next/link';
 
-export default function Links({ hidden, openSidebar, setOpenSidebar }) {
+import { useContext } from 'react';
+import { AppContext } from '../contexts/appContext';
+
+export default function Links({ hidden }) {
   return (
     <>
       <ul
         className={`${hidden} ${
           hidden.length === 0
-            ? 'flex flex-col items-start space-y-8'
+            ? 'flex flex-col items-start space-y-4'
             : 'lg:flex space-x-16'
         }`}
       >
-        <Li
-          name='home'
-          openSidebar={openSidebar}
-          setOpenSidebar={setOpenSidebar}
-        />
-        <Li
-          name='about'
-          openSidebar={openSidebar}
-          setOpenSidebar={setOpenSidebar}
-        />
-        <Li
-          name='skills'
-          openSidebar={openSidebar}
-          setOpenSidebar={setOpenSidebar}
-        />
-        <Li
-          name='projects'
-          openSidebar={openSidebar}
-          setOpenSidebar={setOpenSidebar}
-        />
-        <Li
-          name='contact'
-          openSidebar={openSidebar}
-          setOpenSidebar={setOpenSidebar}
-        />
+        <Li name='home' />
+        <Li name='about' />
+        <Li name='skills' />
+        <Li name='projects' />
+        <Li name='contact' />
       </ul>
     </>
   );
 }
 
-function Li({ name, openSidebar, setOpenSidebar }) {
-  const handleCloseSidebar = () => {
-    setOpenSidebar(!openSidebar);
-  };
+function Li({ name }) {
+  const { setIsSidebarOpen } = useContext(AppContext);
+
+  const handleCloseSidebar = () => setIsSidebarOpen(false);
 
   return (
     <li
       onClick={handleCloseSidebar}
-      className='uppercase font-semibold hover:text-[#4338ca] transition-all duration-150 ease-in-out'
+      className='uppercase font-semibold hover:text-[#4338ca] hover:transition-all hover:duration-150 hover:ease-in-out'
     >
       <Link href={`${name === 'home' ? '/' : `/#${name}`}`}>{name}</Link>
     </li>

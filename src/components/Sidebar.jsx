@@ -1,46 +1,60 @@
-import Img from './Img';
+import Image from 'next/image';
 import Links from './Links';
-import Link from 'next/link';
 
-import Gify from '../assets/gify.gif';
-
-import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { GIFY } from '../constants/data';
 import { AiOutlineClose } from 'react-icons/ai';
 
-export default function Sidebar({ openSidebar, setOpenSidebar }) {
+import { useContext } from 'react';
+import { AppContext } from '../contexts/appContext';
+
+export default function Sidebar() {
+  const { gify } = GIFY;
+  const router = useRouter();
+  const { isSidebarOpen, setIsSidebarOpen } = useContext(AppContext);
+
   const handleCloseSidebar = () => {
-    setOpenSidebar(!openSidebar);
+    setIsSidebarOpen(false);
+    router.push('/');
   };
 
   return (
-    <div className='bg-[#ECF0F3]'>
-      <div className='absolute bottom-20 left-0 w-[100%] h-[auto]'>
-        <Img src={Gify} alt='Gify' />
-      </div>
-
+    <div>
       <div
-        onClick={handleCloseSidebar}
-        className='bg-white rounded-full cursor-pointer p-3 shadow-lg absolute top-5 right-5'
+        className={`lg:hidden bg-[#ecf0f3] fixed top-0 right-0 w-[75%] sm:w-[60%] md:w-[50%] h-screen px-8 py-16 flex flex-col sm:px-16 ${
+          isSidebarOpen ? 'right-0' : '-left-[100%]'
+        }`}
       >
-        <AiOutlineClose size={12} />
-      </div>
+        <div
+          onClick={handleCloseSidebar}
+          className='absolute top-0 right-0 pt-5 pr-5 cursor-pointer'
+        >
+          <AiOutlineClose size={25} />
+        </div>
 
-      <div className='border-b-2 border-[#4338CA]'>
-        <div className='flex justify-between items-center'>
+        <div className='pb-4 border-b-2 border-[#4338CA]'>
           <h2
             onClick={handleCloseSidebar}
-            className='text-xl uppercase mb-8 mt-4 pt-6 text-[#4338CA]'
+            className='text-xl cursor-pointer uppercase pb-4 hover:text-[#4338ca]  hover:transition-all hover:duration-300 hover:ease-in-out'
           >
-            <Link href='/'> vishal chaurasia</Link>
+            vishal chaurasia
           </h2>
+          <p>Let&apos;s build something legendary together</p>
         </div>
-        <p className='w-[90%] pb-5'>
-          Let&apos;s build something legendary together
-        </p>
-      </div>
 
-      <div className='mt-10'>
-        <Links hidden='' />
+        <div className='pt-5 pb-12'>
+          <Links hidden='' />
+        </div>
+
+        <div>
+          <Image
+            className='mix-blend-multiply'
+            src={gify}
+            alt='gify'
+            layout='responsive'
+            priority
+          />
+        </div>
       </div>
     </div>
   );
