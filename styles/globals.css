@@ -23,3 +23,23 @@
     @apply font-bold;
   }
 }
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ecf0f3;
+  border-radius: 3px;
+  box-shadow: inset 0 0 5px #ecf0f3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0e00a7;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0e00a7;
+}
