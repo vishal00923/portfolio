@@ -7,6 +7,7 @@ import Skills from '../src/components/Skills';
 import Social from '../src/components/Social';
 import Contact from '../src/components/Contact';
 import Projects from '../src/components/Projects';
+import TopNavigator from '../src/components/TopNavigator';
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <Contact />
       <Footer />
       <Social />
+      <TopNavigator />
     </div>
   );
 }
