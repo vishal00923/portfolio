@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../contexts/appContext';
 
-import { AiOutlineMenu } from 'react-icons/ai';
+import { CgMenuRightAlt } from 'react-icons/cg';
 
 import Links from './Links';
 import Sidebar from './Sidebar';
@@ -13,7 +13,7 @@ export default function Nav() {
   const { isSidebarOpen, setIsSidebarOpen } = useContext(AppContext);
 
   const handleNavShadow = () => {
-    if (window.scrollY >= 75) {
+    if (window.scrollY >= 200) {
       setShadow(true);
     } else {
       setShadow(false);
@@ -27,21 +27,26 @@ export default function Nav() {
 
   return (
     <nav
-      className={`bg-[#ecf0f3] fixed top-0 w-full flex justify-between z-[100] px-5 py-5 ease-in duration-500 ${
+      className={`bg-[#ecf0f3] h-[70px] fixed top-0 w-full z-[100] px-5 py-5 ease-in duration-500 ${
         shadow && 'shadow-lg transition-all ease-in duration-300'
       }`}
     >
-      <h2
-        onClick={handleRouter}
-        className='hidden text-md uppercase hover:text-[#4338ca]  hover:transition-all hover:duration-300 hover:ease-in-out lg:block'
+      <div className='flex justify-between items-center'>
+        <h2
+          onClick={handleRouter}
+          className='cursor-pointer uppercase text-[#4338CA] font-[900]'
+        >
+          vishal chaurasia
+        </h2>
+
+        <Links hidden='hidden' />
+      </div>
+
+      <div
+        onClick={handleOpenSidebar}
+        className='absolute top-5 right-5 cursor-pointer md:hidden'
       >
-        vishal chaurasia
-      </h2>
-
-      <Links hidden='hidden' />
-
-      <div onClick={handleOpenSidebar} className='cursor-pointer lg:hidden'>
-        <AiOutlineMenu size={25} />
+        <CgMenuRightAlt size={25} />
       </div>
 
       {isSidebarOpen && <Sidebar />}

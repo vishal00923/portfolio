@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <main
       id='home'
-      className='max-w-[1240px] h-screen mx-auto flex flex-col items-center justify-center px-4 mb-[172px] xs:pt-4 md:justify-start md:pt-20 lg:pt-10 xl:justify-center'
+      className='max-w-[1240px] h-screen mx-auto flex flex-col items-center justify-center px-4 mb-[172px] xs:pt-4 md:justify-start md:h-[auto] md:pt-20 lg:pt-10 lg:h-screen xl:justify-center'
     >
       <div className='w-[300px] smh:w-[350px] xss:w-[200px]'>
         <Image
@@ -29,10 +29,12 @@ export default function Hero() {
           Let&apos;s build something together
         </p>
         <h2 className='text-4xl pt-4 xss:text-2xl'>
-          Hey, I&apos;m <span className=' text-[#4338ca]'>Vishal</span>
+          Hey, I&apos;m{' '}
+          <span className='text-[#4338ca] font-[900]'>Vishal</span>
         </h2>
         <h1 className='text-4xl pt-4 xss:text-3xl'>
-          A Front-End Web Developer
+          A <span className='text-[#4338ca] font-[900]'>Front-End</span> Web
+          Developer
         </h1>
         <p className='opacity-80 pt-6'>
           I&apos;m focused on building responsive front-end web applications

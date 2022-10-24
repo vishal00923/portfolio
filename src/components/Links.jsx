@@ -9,8 +9,8 @@ export default function Links({ hidden }) {
       <ul
         className={`${hidden} ${
           hidden.length === 0
-            ? 'flex flex-col items-start space-y-4'
-            : 'lg:flex space-x-16'
+            ? 'flex flex-col items-start space-y-6'
+            : 'md:flex md:space-x-8 lg:space-x-16'
         }`}
       >
         <Li name='home' />
@@ -31,7 +31,7 @@ function Li({ name }) {
   return (
     <li
       onClick={handleCloseSidebar}
-      className='uppercase font-semibold hover:text-[#4338ca] hover:transition-all hover:duration-150 hover:ease-in-out'
+      className='uppercase font-[700] hover:transition-all hover:duration-150 hover:ease-in-out hover:border-b-[3px] hover:border-[#4338ca]'
     >
       <Link href={`${name === 'home' ? '/' : `/#${name}`}`}>{name}</Link>
     </li>

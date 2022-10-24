@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   html {
-    font-family: 'Pacifico', cursive;
     scroll-behavior: smooth;
+    font-family: 'Alegreya Sans', sans-serif;
   }
 
   body {

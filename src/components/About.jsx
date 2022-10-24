@@ -22,7 +22,7 @@ export default function About() {
         </p>
       </div>
 
-      <div className='flex flex-col items-center px-4 space-y-0 md:flex-row md:items-center md:space-x-10 md:pt-10'>
+      <div className='flex flex-col items-center px-4 space-y-10 md:flex-row md:items-center md:space-x-10 md:pt-10'>
         <div className='flex flex-col items-center space-y-4'>
           <div>
             <ul className='list-disc'>
@@ -57,7 +57,7 @@ export default function About() {
               </li>
             </ul>
 
-            <p className='pt-[10px]'>
+            <p className='pt-[10px] font-[700]'>
               I&apos;m open to Job opportunities where I can contribute, learn
               and grow. If you have a good opportunity that matches my skills
               and experience then don&apos;t hesitate to contact me.
@@ -74,7 +74,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className='shadow-xl rounded-md w-[100%]'>
+        <div className='shadow-xl hover:shadow-2xl rounded-md w-[100%]'>
           <Image
             className='mix-blend-multiply'
             src={about}
