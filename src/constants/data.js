@@ -61,6 +61,7 @@ export const PROJECTS = [
     id: 1,
     img: require('../assets/crypto.jpg'),
     name: 'Crypto Tracker',
+    route: '/crypto-tracker',
     description:
       'Crypto Tracker is a website which tracks crypto currencies where people can add their faviourate crytp currencies in their watchlist.',
   },
@@ -68,6 +69,7 @@ export const PROJECTS = [
     id: 2,
     img: require('../assets/game.jpg'),
     name: 'Pig Game',
+    route: '/pig-game',
     description:
       'Pig game is a simple dice and I created this game from scratch using the frontend tools I know.',
   },
@@ -75,6 +77,7 @@ export const PROJECTS = [
     id: 3,
     img: require('../assets/notes.jpg'),
     name: 'Notes App',
+    route: '/notes-app',
     description:
       'Notes App is a website where people can add their notes and save them for later use.',
   },
@@ -82,6 +85,7 @@ export const PROJECTS = [
     id: 4,
     img: require('../assets/travel.jpg'),
     name: 'Travel Website',
+    route: '/travel-website',
     description:
       'Travel website is simple website with clean UI and I created this website from scratch using the frontend tools I know.',
   },
