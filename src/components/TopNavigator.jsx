@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router';
 import { AiOutlineArrowUp } from 'react-icons/ai';
 
-export default function TopNavigator() {
+export default function TopNavigator({ route }) {
   const router = useRouter();
 
-  const handleRouter = () => router.push('/');
+  const handleRouter = () => router.push(route);
 
   return (
     <div onClick={handleRouter} className='fixed right-5 bottom-5'>
