@@ -1,14 +1,4 @@
-const tools = [
-  'html',
-  'css',
-  'react js',
-  'context api',
-  'mui',
-  'react router',
-  'firebase',
-];
-
-export default function Tools() {
+export default function Tools({ tools }) {
   return (
     <div className='flex items-center flex-wrap'>
       {tools.map((tool, idx) => (

@@ -3,13 +3,13 @@ import Link from 'next/link';
 
 import Tools from './Tools';
 
-export default function ProjectDescription({ p1, p2, cryptoImg, live, repo }) {
+export default function ProjectDescription({ p1, p2, img, live, repo, tools }) {
   return (
     <section className='max-w-[1240px] m-auto mb-[52px] px-4 py-12'>
       <div className='md:w-[75%] m-auto'>
         <Image
           className='mix-blend-multiply'
-          src={cryptoImg}
+          src={img}
           alt='crypto'
           layout='responsive'
           priority
@@ -31,7 +31,7 @@ export default function ProjectDescription({ p1, p2, cryptoImg, live, repo }) {
         <h3 className='text-[1.275rem] sm:text-[1.475rem] md:text-[1.5rem] lg:text-[1.625rem] pb-6'>
           Tools Used
         </h3>
-        <Tools />
+        <Tools tools={tools} />
       </div>
 
       <div className='max-w-[720px] m-auto px-2'>

@@ -9,6 +9,16 @@ import ProjectDescription from '../src/components/ProjectDescription';
 import cryptoImg from '../src/assets/crypto.jpg';
 
 export default function CryptoTracker() {
+  const tools = [
+    'html',
+    'css',
+    'react js',
+    'context api',
+    'mui',
+    'react router',
+    'firebase',
+  ];
+
   return (
     <div>
       <Head>
@@ -29,9 +39,10 @@ export default function CryptoTracker() {
         p2='I took inspiration from other similar platforms like Coin Gecko, Coin
           Market etc. which are similar in terms of showing crypto information
           for the users.'
-        cryptoImg={cryptoImg}
+        img={cryptoImg}
         live='https://crypto-tracker-a9e45.web.app/'
         repo='https://github.com/vishal00923/crypto-tracker'
+        tools={tools}
       />
       <Footer />
       <TopNavigator route='/crypto-tracker' />
