@@ -14,6 +14,8 @@ module.exports = {
       xss: { max: '280px' },
       smh: { min: '410px' },
       smd: { min: '540px' },
+      mdlg: { min: '824px' },
+      surface: { min: '912px' },
       '2xl': { min: '1536px' },
     },
   },
