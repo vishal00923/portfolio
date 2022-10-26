@@ -7,7 +7,7 @@ export default function Main({ title, live }) {
   const { gify } = GIFY;
 
   return (
-    <main className='max-w-[1240px] h-screen mx-auto flex flex-col items-center justify-center px-4 mb-[172px] md:justify-center md:h-[50vh] lg:h-screen'>
+    <main className='max-w-[1240px] h-screen mx-auto flex flex-col items-center justify-center px-4 mb-[172px] md:justify-center md:h-[60vh] md:pt-6 lg:h-screen'>
       <div className='w-[300px] smh:w-[350px] xss:w-[200px]'>
         <Image
           className='mix-blend-multiply'
