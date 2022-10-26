@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Section from './Section';
 
+import { useRouter } from 'next/router';
 import { PROJECTS } from '../constants/data';
 
 export default function Projects() {
@@ -13,15 +14,23 @@ export default function Projects() {
       </div>
 
       <div className='pt-10 md:pt-12 grid grid-cols-1 gap-y-16 sm:grid-cols-2 sm:gap-x-10'>
-        {PROJECTS.map(({ id, img, name, description }) => (
-          <Project key={id} img={img} name={name} description={description} />
+        {PROJECTS.map(({ id, img, name, route, description }) => (
+          <Project
+            key={id}
+            img={img}
+            name={name}
+            route={route}
+            description={description}
+          />
         ))}
       </div>
     </div>
   );
 }
 
-function Project({ img, name, description }) {
+function Project({ img, name, route, description }) {
+  const router = useRouter();
+
   return (
     <>
       <div>
@@ -40,7 +49,7 @@ function Project({ img, name, description }) {
           <p>{description}</p>
         </div>
 
-        <div>
+        <div onClick={() => router.push(route)}>
           <button className='w-[200px] py-3 uppercase font-bold shadow-xl tracking-[1px] bg-[#4338ca] text-white rounded-[5px] active:scale-90 transition duration-150'>
             case study
           </button>

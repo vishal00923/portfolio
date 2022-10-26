@@ -28,7 +28,7 @@ export default function About() {
             <ul className='list-disc'>
               <li className='pb-2'>
                 <p>
-                  I specialize in building mobile responsive front-end UI
+                  I&apos;m specialize in building mobile responsive front-end UI
                   applications that connect with API&apos;s and other backend
                   technologies.
                 </p>

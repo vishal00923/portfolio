@@ -25,7 +25,7 @@ export default function Hero() {
       </div>
 
       <div className='text-center'>
-        <p className='uppercase opacity-70 mb-4'>
+        <p className='uppercase opacity-80 mb-4'>
           Let&apos;s build something together
         </p>
         <h2 className='text-4xl pt-4 xss:text-2xl'>

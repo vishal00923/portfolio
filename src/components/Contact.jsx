@@ -9,7 +9,7 @@ export default function Contact() {
   const { isSidebarOpen } = useContext(AppContext);
 
   return (
-    <div id='contact' className='max-w-[1240px] m-auto mb-[172px] px-4 py-20'>
+    <div id='contact' className='max-w-[1240px] m-auto mb-[52px] px-4 py-20'>
       <Section name='contact' />
 
       <div className='mt-4'>
