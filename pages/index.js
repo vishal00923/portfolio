@@ -15,7 +15,7 @@ export default function Home() {
       <Head>
         <title>Vishal | Front-End Developer</title>
         <meta name='description' content='Welcome to my personal portfolio' />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/gify.gif' />
       </Head>
 
       <Header />
@@ -25,7 +25,7 @@ export default function Home() {
       <Contact />
       <Footer />
       <Social />
-      <TopNavigator />
+      <TopNavigator route='/' />
     </div>
   );
 }
