@@ -1,6 +1,5 @@
 import Link from 'next/link';
 
-import { TiArrowForwardOutline } from 'react-icons/ti';
 import { AiOutlineBook, AiOutlineMail } from 'react-icons/ai';
 import {
   SlSocialGithub,

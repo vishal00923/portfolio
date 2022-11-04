@@ -2,6 +2,8 @@ import Image from 'next/image';
 
 import { useRouter } from 'next/router';
 import { ABOUT_IMG } from '../constants/data';
+
+import Button from './Button';
 import Section from './Section';
 
 export default function About() {
@@ -65,12 +67,7 @@ export default function About() {
           </div>
 
           <div className='lg:pt-5'>
-            <button
-              onClick={handleRouter}
-              className='w-[200px] py-3 uppercase font-bold shadow-xl tracking-[1px] bg-[#4338ca] text-white rounded-[5px] active:scale-90 transition duration-150'
-            >
-              contact
-            </button>
+            <Button handleClick={handleRouter}>contact</Button>
           </div>
         </div>
 

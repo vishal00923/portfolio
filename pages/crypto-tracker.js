@@ -12,11 +12,11 @@ export default function CryptoTracker() {
   const tools = [
     'html',
     'css',
+    'mui',
+    'firebase',
     'react js',
     'context api',
-    'mui',
     'react router',
-    'firebase',
   ];
 
   return (

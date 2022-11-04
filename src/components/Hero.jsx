@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { GIFY } from '../constants/data';
 
+import Button from './Button';
+
 export default function Hero() {
   const { gify } = GIFY;
   const router = useRouter();
@@ -43,12 +45,7 @@ export default function Hero() {
       </div>
 
       <div className='flex justify-center mt-12 smh:mt-20 smd:mt-8'>
-        <button
-          onClick={handleRouter}
-          className='w-[200px] py-3 uppercase font-bold shadow-xl tracking-[1px] bg-[#4338ca] text-white rounded-[5px] active:scale-90 transition duration-150'
-        >
-          projects
-        </button>
+        <Button handleClick={handleRouter}>projects</Button>
       </div>
     </main>
   );

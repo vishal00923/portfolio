@@ -3,6 +3,7 @@ import Section from './Section';
 
 import { useRouter } from 'next/router';
 import { PROJECTS } from '../constants/data';
+import Button from './Button';
 
 export default function Projects() {
   return (
@@ -31,6 +32,8 @@ export default function Projects() {
 function Project({ img, name, route, description }) {
   const router = useRouter();
 
+  const handleRouter = () => router.push(route);
+
   return (
     <>
       <div>
@@ -49,10 +52,8 @@ function Project({ img, name, route, description }) {
           <p>{description}</p>
         </div>
 
-        <div onClick={() => router.push(route)}>
-          <button className='w-[200px] py-3 uppercase font-bold shadow-xl tracking-[1px] bg-[#4338ca] text-white rounded-[5px] active:scale-90 transition duration-150'>
-            case study
-          </button>
+        <div>
+          <Button handleClick={handleRouter}>case study</Button>
         </div>
       </div>
     </>
