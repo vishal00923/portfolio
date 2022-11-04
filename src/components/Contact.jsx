@@ -20,7 +20,12 @@ export default function Contact() {
       </div>
 
       <div className='max-w-[920px] m-auto mt-8 px-10 py-8 pt-10 shadow-2xl rounded-md md:pt-12'>
-        <form className='grid grid-cols-1 gap-y-6' action=''>
+        <form
+          className='grid grid-cols-1 gap-y-6'
+          action='https://getform.io/f/c08aa9db-dbd9-40aa-a202-8e33254a3818'
+          method='POST'
+          encType='multipart/form-data'
+        >
           <InputBox name='name' type='text' placeholder='Enter Your Name' />
           <InputBox name='email' type='email' placeholder='Enter Your Email' />
 
